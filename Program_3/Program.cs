@@ -107,9 +107,20 @@ namespace Program
         }
         static void PrintArray(int[] array)
         {
-            foreach (int i in array)
+            if (array == null)
             {
-                Console.Write($"{i} ");
+                Console.WriteLine();
+                Console.WriteLine("Массив не инициализирован!");
+                Console.WriteLine("Сначала нужно инициализировать массив.");
+                Console.WriteLine();
+            }
+            else
+            {
+
+                foreach (int i in array)
+                {
+                    Console.Write($"{i} ");
+                }
             }
         }
 
@@ -293,12 +304,12 @@ namespace Program
                         if (count == 1)
                         {
                             array1 = MultArray(array1);
-                            Console.WriteLine("Массив номер 1 умножен ");
+                            
                         }
                         else if (count == 2)
                         {
                             array2 = MultArray(array2);
-                            Console.WriteLine("Массив номер 2 умножен ");
+                            
                         }
                         else if (count == 3)
                         {
@@ -306,7 +317,7 @@ namespace Program
                             array1 = MultArray(array1);
                             Console.WriteLine("Массив номер 2: ");
                             array2 = MultArray(array2);
-                            Console.WriteLine("Массивы номер 1 и 2 умножены ");
+                           
                         }
                         Console.WriteLine("");
                         break;
